@@ -1,0 +1,36 @@
+import java.util.Arrays;
+public class Main
+{
+public static void main (String[] args) 
+{
+int[] a={168,179,181,120,142,204};
+qs(a,0,a.length-1);
+for(int i=0;i<a.length;i++)
+{
+System.out.println(a[i]);
+}     
+}
+static void qs(int[] a,int l,int r)
+{
+int t,i=l,j;
+int pv=a[r];
+if(l<r)
+{
+for(j=l;j<r;j++)
+{
+if(pv>a[j])
+{
+t=a[i];
+a[i]=a[j];
+a[j]=t;
+i++;
+}
+}
+t=a[i];
+a[i]=a[r];
+a[r]=t;
+qs(a,l,i-1);
+qs(a,i+1,r);
+}
+}
+}
