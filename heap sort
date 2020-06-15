@@ -1,0 +1,43 @@
+import java.util.Arrays;
+public class Main
+{
+public static void main(String args[])
+{
+int a[]={168,179,181,120,142,204};
+int i,j,n =a.length;
+sortarray(a);
+for(int k=0;k<n-1;k++)
+{
+System.out.println(a[k]);
+}
+}
+static void maxheap(int[] a,int n,int i)
+{
+int left=2*i+1;
+int right=2*i+2;
+int bc=left;
+if(right<=n-1 && a[left]<a[right])
+{
+bc=right;
+}
+if(a[bc]>a[i])
+{
+int t=a[i];
+a[i]=a[bc];
+a[bc]=t;
+}
+static void sortarray(int a[])
+{
+for(j=n;j>1;j--)
+{
+for(i=j/2-1;i>=0;i--)
+{
+maxheap(a,j,i);
+}
+t=a[j-1];
+a[j-1]=a[0];
+a[0]=t;
+}
+}}
+}
+
