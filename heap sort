@@ -6,9 +6,9 @@ public static void main(String args[])
 int a[]={168,179,181,120,142,204};
 int i,j,n =a.length;
 sortarray(a);
-for(int k=0;k<n-1;k++)
+for(int k=0;k<n;k++)
 {
-System.out.println(a[k]);
+System.out.println(a[k]+" ");
 }
 }
 static void maxheap(int[] a,int n,int i)
@@ -25,19 +25,19 @@ if(a[bc]>a[i])
 int t=a[i];
 a[i]=a[bc];
 a[bc]=t;
-}
+}}
 static void sortarray(int a[])
 {
-for(j=n;j>1;j--)
+for(int j=n;j>1;j--)
 {
-for(i=j/2-1;i>=0;i--)
+for(int i=j/2-1;i>=0;i--)
 {
 maxheap(a,j,i);
 }
-t=a[j-1];
+int t=a[j-1];
 a[j-1]=a[0];
 a[0]=t;
 }
-}}
+}
 }
 
