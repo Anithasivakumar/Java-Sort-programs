@@ -1,0 +1,39 @@
+import java.util.Arrays;
+public class Main
+{
+public static void main(String args[])
+{
+int a[]={168,178,181,120,142,204};
+shellsort(a);
+for(int i=0;i<n;i++)
+{
+System.out.print(a[i]+" ");
+}
+}
+static void shellsort(int a[])
+{
+int n=a.length;
+int gap,fw,rv;
+for(gap=n/2;gap>=0;gap=gap/2)
+{
+    for(fw=gap;fw<n;fw++)
+    {
+        int tbi=a[fw];
+        for(rv=fw-gap;rv>=0;rv=rv-gap)
+        {
+            if(tbi<a[rv])
+            {
+                a[rv+gap]=a[rv];
+            }
+            else
+            {
+                break;
+            }   
+        }
+ }
+  a[rv+gap]=tbi;
+}
+}
+}
+          
+
