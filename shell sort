@@ -4,12 +4,12 @@ public class Main
 public static void main(String args[])
 {
 int a[]={168,178,181,120,142,204};
+int n=a.length;
 shellsort(a);
 for(int i=0;i<n;i++)
 {
 System.out.print(a[i]+" ");
-}
-}
+}}
 static void shellsort(int a[])
 {
 int n=a.length;
@@ -30,8 +30,9 @@ for(gap=n/2;gap>=0;gap=gap/2)
                 break;
             }   
         }
- }
-  a[rv+gap]=tbi;
+        
+    }
+  
 }
 }
 }
