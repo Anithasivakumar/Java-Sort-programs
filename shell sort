@@ -30,7 +30,7 @@ for(gap=n/2;gap>=0;gap=gap/2)
                 break;
             }   
         }
-        
+          a[rv+gap]=tbi;
     }
   
 }
