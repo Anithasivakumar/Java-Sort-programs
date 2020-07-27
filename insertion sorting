@@ -7,7 +7,7 @@ int[] b={234,567,123,145,120,199};
 int i,j;
 for(i=1;i<b.length;i++)
 {
-int m=b[i];
+int j,m=b[i];
 for(j=i-1;j>=0 && b[j]>m;j--)
 {
 b[j+1]=b[j];
