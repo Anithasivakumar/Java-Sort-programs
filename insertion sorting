@@ -4,7 +4,7 @@ public class Main
 public static void main(String args[])
 {
 int[] b={234,567,123,145,120,199};
-int i,j;
+int i;
 for(i=1;i<b.length;i++)
 {
 int j,m=b[i];
